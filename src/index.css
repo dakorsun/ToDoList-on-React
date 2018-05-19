@@ -1,0 +1,350 @@
+*{
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  
+  color: #444;
+}
+
+body {
+  height: 1500px;
+}
+
+#toDoBlock {
+  width: 80%;
+  max-width: 800px;
+  margin: 60px auto;
+  overflow: hidden;
+  
+
+}
+
+
+#toDoBlock .title {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+
+  font-size: 21px;
+  font-family: 'Open Sans', sans-serif;
+  
+  padding: 0 10px;
+  border-bottom: 2px solid #444;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+#toDoBlock .enter {
+  height: 40px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#toDoBlock .enter input { 
+
+  background: #fff;
+  border: none;
+  width: 80%;
+  height: 40px;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+  border-right: 1px solid #444;
+  inset: none;
+}
+
+.task-edit-input { 
+
+  background: #996;
+  border: none;
+  width: 90%;
+  height: 50px;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+  border: 1px solid #999966;
+  border-bottom: 1px solid #444;
+  display: inline-block;
+}
+
+.ok-button {
+  background: #444;
+  color: #fff;
+  height: 100%;
+  width: 10%;
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+}
+
+.ok-button:hover {
+  box-shadow: inset 0 0 40px 15px rgba(102, 102, 51,.4);
+  background: #996;
+  color: #444;
+  transition: .4s;
+}
+
+
+#toDoBlock .enter .addBtn {
+  display: inline-block;
+  width: 20%;
+  line-height: 40px;
+  height: 40px;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  background: #fff;
+}
+#toDoBlock .enter .addBtn:hover {
+  cursor: pointer;
+  color: #00802b;
+  transition: .3s;
+
+}
+
+#toDoBlock .enter .addBtn.click {
+  box-shadow: inset 0 0 15px 2px #888;
+}
+
+
+#toDoBlock .listToDo,
+#toDoBlock .listDone {
+  width: 100%;
+  display: block;
+  font-family: 'Open Sans';
+}
+
+
+#toDoBlock .listToDo li,
+#toDoBlock .listDone li {
+  position: relative;
+  background: #999966;
+
+  list-style: none;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: justify;
+  overflow: hidden;
+  border-bottom: 1px solid #444;
+}
+#toDoBlock .listToDo li:hover,
+#toDoBlock .listDone li:hover {
+  box-shadow: inset 0 0 40px 10px rgba(102, 102, 51,.4);
+  transition: .4s;
+}
+
+#toDoBlock .listDone li span{
+  text-decoration: line-through;
+}
+
+
+
+#toDoBlock .listToDo li span,
+#toDoBlock .listDone li span {
+
+  padding-left: 10px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  display: inline-block;
+}
+ 
+#toDoBlock .listToDo li .options,
+#toDoBlock .listDone li .options {
+  display: inline-block;
+  position: absolute;
+  right: -300px;
+
+  width: 320px;
+  height: 50px;
+  line-height: 50px;
+  z-index: 2;
+  background: #fff;
+}
+
+#toDoBlock .listToDo li .options div,
+#toDoBlock .listDone li .options div {
+  text-align: center;
+  transition: .2s;
+
+  width: 100px;
+  height: 100%;
+  line-height: 50px;
+  display: inline-block;
+  font-size: 16px;
+  color: #111;
+  vertical-align: middle;
+
+}
+
+#toDoBlock .listToDo li .options .button,
+#toDoBlock .listDone li .options .button {
+  width: 20px;
+  height: 50px;
+  background: #444;
+  vertical-align: middle;
+}
+
+#toDoBlock .listToDo li .options .button:hover,
+#toDoBlock .listDone li .options .button:hover {
+  /*box-shadow: inset 4px 0 15px 0 #333;*/
+  background: #333;
+  transition: .2s;
+}
+
+#toDoBlockBlock .listToDo li .options .button .arrow,
+#toDoBlock .listDone li .options .button .arrow {
+    width: 5px;
+    height: 5px;  
+
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+#toDoBlock .listToDo li .options .button img,
+#toDoBlock .listDone li .options .button img {
+  display: inline-block;
+  margin: 0 auto;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  vertical-align: middle;
+  /*transform: rotateZ(-90deg);*/
+  /*background: #996;*/
+}
+
+
+
+#toDoBlock .listToDo li .options .edit:hover,
+#toDoBlock .listDone li .options .edit:hover {
+  color: #e6b800;
+  cursor: pointer;
+}
+#toDoBlock .listToDo li .options .done:hover,
+#toDoBlock .listDone li .options .done:hover {
+  color: #00802b;
+  cursor: pointer;
+}
+#toDoBlock .listToDo li .options .delete:hover,
+#toDoBlock .listDone li .options .delete:hover {
+  color: #c00;
+  cursor: pointer;
+}
+#toDoBlock .listToDo li .options .undone:hover,
+#toDoBlock .listDone li .options .undone:hover {
+  color:  #8000ff;
+  cursor: pointer;
+}
+
+
+.open {
+  animation: open .7s ease;
+  animation-fill-mode: forwards;
+}
+
+.Opened {
+  /*right: 0;*/
+}
+
+.close {
+  animation: close .5s ease-in;
+  animation-fill-mode: forwards;
+
+}
+
+.closed {
+ /* right: -300px;*/
+}
+
+
+.options.open .button img {
+  animation: rotateY .7s linear;
+  animation-fill-mode: forwards;
+}
+
+.options.close .button img {
+  animation: rotate_Y .5s linear;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes open{
+  from {
+
+  }
+  to { 
+    transform: translateX(-300px);
+  }
+}
+
+@keyframes close{
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotateY {
+  from {
+
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes rotate_Y {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+
+
+
+
+
+
+
+.container {
+  margin: 0 auto;
+  width: 70%;
+  height: 250px;
+  background: #999966;
+  padding: 20px;
+}
+
+
+.square { 
+  margin: 0 auto;
+  vertical-align: middle;
+  width: 80px;
+  height: 80px;
+  background: #444;
+
+  animation: rotateY 1s;
+}
+
