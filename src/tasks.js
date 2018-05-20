@@ -21,6 +21,7 @@ let tasks = {
 		{id: shortid.generate(), name: 'Edit mobile version'},
 		{id: shortid.generate(), name: 'Provide Sass and Sass styles compilation'},
 		{id: shortid.generate(), name: 'Provide CssTransitionGroups tasks animation'},
+		{id: shortid.generate(), name: 'Make list dragable and sortable'},
 		{id: shortid.generate(), name: 'Find a work'},
 	],
 
